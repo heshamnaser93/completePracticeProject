@@ -18,7 +18,7 @@ const AddUser = (props) => {
       });
     } else if (+enteredAge < 1) {
       setError({
-        title: "Invali Age",
+        title: "Invalid Age",
         message: "Please enter a valid age (age > 0)",
       });
     }
@@ -41,7 +41,7 @@ const AddUser = (props) => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       {error && (
         <ErrorModal
           title={error.title}
@@ -68,7 +68,7 @@ const AddUser = (props) => {
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </div>
+    </React.Fragment>
   );
 };
 
